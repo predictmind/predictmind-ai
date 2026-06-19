@@ -7,7 +7,7 @@ Engine document in the private predictmind/app repository.
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -35,5 +35,5 @@ def health() -> HealthResponse:
         status="ok",
         service="predictmind-ai",
         version=__version__,
-        timestamp=datetime.now(timezone.utc).isoformat(),
+        timestamp=datetime.now(UTC).isoformat(),
     )
