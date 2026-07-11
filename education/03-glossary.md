@@ -1,4 +1,4 @@
-# 2. Glossary (the dictionary)
+# 3. Glossary (the dictionary)
 
 Simple meanings for the words in the AI service notes. This service is **Python**,
 so some words differ from the TypeScript services.
@@ -37,5 +37,12 @@ so some words differ from the TypeScript services.
 | **Ruff** | A fast Python linter/formatter (checks + tidies code). |
 | **Pytest** | Python's testing tool. |
 | **Single-stage / multi-stage build** | Building the image in one step vs several; Python here uses one for simplicity. |
+| **setuptools** | The tool that packs a Python project so it can be installed. |
+| **auto-discovery** | setuptools **guessing** which folders are your code. |
+| **package (Python)** | A folder of Python code that can be imported (usually has `__init__.py`). |
+| **build-system** | The `pyproject.toml` section naming which tool builds the project. |
+| **editable install** | `pip install -e` — edits to the source update the installed copy live. |
+| **virtual environment (venv)** | A private, throwaway Python sandbox for one project. |
+| **CI** | Robots that auto-run lint/tests on every push. |
 
 Back to the [index](README.md).
