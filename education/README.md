@@ -10,5 +10,6 @@ called **FastAPI**. Python is a very popular language for AI and math work.
 | # | File | What it covers |
 | --- | --- | --- |
 | 1 | [01-fastapi-and-docker.md](01-fastapi-and-docker.md) | The FastAPI scaffold (health endpoint) + how it runs in Docker as a non-root user |
+| 2 | [02-glossary.md](02-glossary.md) | Dictionary of every term used in these notes |
 
 Glossary terms are defined the first time they appear in each note.
