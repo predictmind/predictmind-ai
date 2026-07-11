@@ -23,6 +23,18 @@ uvicorn app.main:app --reload --port 8000
 
 Health check: `GET http://localhost:8000/health`.
 
+## Internal endpoints
+
+These are called east-west by other services (not exposed by the public gateway):
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| POST | `/internal/ai/news/analyze` | Sentiment + impact + coins for one article (S7.2/S7.3) |
+| POST | `/internal/ai/sentiment/analyze` | Aggregate a batch of texts into `{ bullish, bearish, neutral, confidence }` |
+
+Sentiment uses **VADER** with a crypto-augmented lexicon. See
+[`education/03-news-sentiment.md`](education/03-news-sentiment.md).
+
 ## Commands
 
 | Command | Purpose |

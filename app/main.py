@@ -13,12 +13,15 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from . import __version__
+from .analysis.router import router as analysis_router
 
 app = FastAPI(
     title="PredictMind AI",
     version=__version__,
     description="AI services for PredictMind: strategy generation, intelligence, PredictScore.",
 )
+
+app.include_router(analysis_router)
 
 
 class HealthResponse(BaseModel):
